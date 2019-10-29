@@ -1,7 +1,7 @@
-from utils import encoders
+from utils.encoders import ObjectJsonSerializable
 
 
-class CreditCard(encoders.ObjectJsonSerializable):
+class CreditCard(ObjectJsonSerializable):
     def __init__(self, cvv, brand):
         self.card_number = None
         self.holder = None
