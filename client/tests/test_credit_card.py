@@ -1,4 +1,3 @@
-import pytest
 import json
 from client.credit_card import CreditCard
 
@@ -26,5 +25,5 @@ def test_get_brand():
     assert 'mastercard' == CreditCard.get_brand("5168 4412 2363 0339")
     assert 'maestro' == CreditCard.get_brand("5080 7415 4958 8144 561")
     assert 'american express' == CreditCard.get_brand("3716 4219 0784 801")
-    
+
     assert not CreditCard.get_brand('')

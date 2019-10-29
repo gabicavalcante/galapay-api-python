@@ -1,12 +1,8 @@
-import pytest
 import json
 from client.gclient import GalaxPayClient
 from client.request import Request
 from client.auth import Auth
-from client.auth import Auth
 from client.credit_card import CreditCard
-
-from dynaconf import LazySettings
 
 
 payment_data = {
