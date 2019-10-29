@@ -1,4 +1,4 @@
-from utils.encoders import ObjectJsonSerializable
+from .utils.encoders import ObjectJsonSerializable
 
 
 class CreditCard(ObjectJsonSerializable):
