@@ -1,3 +1,5 @@
 pytest==5.2.2
+pytest-cov==2.8.1
 dynaconf==2.2.0
 pytest-cov==2.8.1
+requests==2.22.0
