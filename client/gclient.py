@@ -1,4 +1,3 @@
-import requests
 from .utils.encoders import ObjectJsonSerializable
 
 
@@ -9,8 +8,3 @@ class GalaxPayClient(ObjectJsonSerializable):
 
     def createPaymentBill(self):
         pass
-        #url = 'https://app.galaxpay.com.br/webservice/createPaymentBill'
-
-        #payload = sale.toJSON()
-        #r = requests.post(url, data=payload)
-        # print(r.json)
