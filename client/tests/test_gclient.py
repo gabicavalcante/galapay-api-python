@@ -6,6 +6,9 @@ from client.auth import Auth
 from client.auth import Auth
 from client.credit_card import CreditCard
 
+from dynaconf import LazySettings
+
+
 payment_data = {
     "Auth": {
         "galaxId": "5473",
