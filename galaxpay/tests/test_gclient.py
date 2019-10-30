@@ -1,8 +1,8 @@
 import json
-from client.gclient import GalaxPayClient
-from client.request import Request
-from client.auth import Auth
-from client.credit_card import CreditCard
+from galaxpay.gclient import GalaxPayClient
+from galaxpay.request import Request
+from galaxpay.auth import Auth
+from galaxpay.credit_card import CreditCard
 
 
 payment_data = {
