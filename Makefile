@@ -4,6 +4,8 @@ VENV_NAME?=venv
 VENV_ACTIVATE=. $(VENV_NAME)/bin/activate
 PYTHON=${VENV_NAME}/bin/python3
 
+PYTHON_VERSION=3.7.4
+
 .DEFAULT: help
 help:
 	@echo "make prepare-dev"
@@ -26,7 +28,6 @@ prepare-dev:
 	which virtualenv || python3 -m pip install virtualenv
 	make venv
 
-# Requirements are in setup.py, so whenever setup.py is changed, re-run installation of dependencies.
 venv: 
 	cp .secrets.toml.sample .secrets.toml
 	test -d $(VENV_NAME) || virtualenv -p python3 $(VENV_NAME)
@@ -35,13 +36,14 @@ venv:
 
 
 test: venv
-	${PYTHON} -m pytest -vv tests
+	${PYTHON} -m pytest -vv tests/
 
 lint: venv
-	${PYTHON} -m pylint client 
+	${PYTHON} -m pylint client/
 
 doc: venv
 	$(VENV_ACTIVATE) && cd docs; make html
 
 clean: 
-	rm -rf $(VENV_NAME) *.eggs *.egg-info dist build docs/_build .cache
+	@find ./ -name '*.pyc' -exec rm -f {} \;
+	rm -rf $(VENV_NAME) *.eggs *.egg-info dist build docs/_build .cache htmlcov/
