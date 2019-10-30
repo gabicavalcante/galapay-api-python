@@ -1,0 +1,11 @@
+[flake8]
+disable_noqa = True
+count = True
+statistics = True
+max-line-length = 80
+max-complexity = 18
+max-doc-length = 1000
+ignore = E121,E226,W503
+exclude = 
+    migrations,
+    __pycache__,

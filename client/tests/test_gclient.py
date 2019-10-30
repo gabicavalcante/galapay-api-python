@@ -31,7 +31,9 @@ payment_data = {
 def test_create_card_json():
 
     card_payment = payment_data.get('Request').get('Card')
-    card = CreditCard('541', 'visa')
+    card = CreditCard()
+    card.cvv = '541'
+    card.brand = 'visa'
     card.number = card_payment.get('number')
     card.holder = card_payment.get('holder')
     card.expiryMonth = card_payment.get('expiryMonth')

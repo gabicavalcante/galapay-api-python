@@ -8,5 +8,5 @@ class Auth(ObjectJsonSerializable):
         self.galaxHash = galaxHash
 
     def read_config(self):
-        self.galaxId = settings.get('galaxId')
-        self.galaxHash = settings.get('galaxHash')
+        self.galaxId = settings.get("galaxId")
+        self.galaxHash = settings.get("galaxHash")

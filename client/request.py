@@ -6,7 +6,7 @@ class Request(ObjectJsonSerializable):
         # self.Customer = customer
         self.Card = card
 
-        # self.quantity = None
+        self.quantity = None
         self.paymentType = None
         self.numberOfInstallments = None
         self.payday = None
