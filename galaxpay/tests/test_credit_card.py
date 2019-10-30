@@ -1,5 +1,5 @@
 import json
-from client.credit_card import CreditCard
+from galaxpay.credit_card import CreditCard
 
 card_data = {
     "brand": "visa",
