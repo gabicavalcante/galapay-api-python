@@ -3,8 +3,8 @@ import json
 
 data = {}
 data['Auth'] = {}
-data['Auth']['galaxId'] = "4858"
-data['Auth']['galaxHash'] = "20T12zXtOoV2XjNlDrImSdI7OsWmSoFbC3GrIsIt"
+data['Auth']['galaxId'] = ""
+data['Auth']['galaxHash'] = ""
 data['Request'] = {}
 data['Request']['internalId'] = "8"
 print(json.dumps(data, sort_keys=False, indent=4))
