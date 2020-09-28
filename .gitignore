@@ -5,3 +5,4 @@ __pycache__
 .vscode
 .coverage
 venv/
+pythonenv3.8
